@@ -6,6 +6,15 @@ GIT
     faker (2.12.0)
       i18n (>= 1.6, < 2)
 
+GIT
+  remote: https://github.com/rails/activeresource.git
+  revision: 71f349ade11c05e56fb67132e6e167d8a8fe4a5e
+  specs:
+    activeresource (5.1.1)
+      activemodel (>= 5.0, < 7)
+      activemodel-serializers-xml (~> 1.0)
+      activesupport (>= 5.0, < 7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,10 +68,6 @@ GEM
     activerecord (6.0.3.1)
       activemodel (= 6.0.3.1)
       activesupport (= 6.0.3.1)
-    activeresource (5.1.1)
-      activemodel (>= 5.0, < 7)
-      activemodel-serializers-xml (~> 1.0)
-      activesupport (>= 5.0, < 7)
     activestorage (6.0.3.1)
       actionpack (= 6.0.3.1)
       activejob (= 6.0.3.1)
@@ -392,6 +397,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_hash (~> 2.3)
+  activeresource!
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.2)

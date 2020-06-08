@@ -6,6 +6,7 @@ ruby '2.6.5'
 
 # CORE
 gem 'shopify_app'
+gem 'activeresource', github: 'rails/activeresource'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching.
 gem 'puma', '~> 4.3' # Use Puma as the app server - 4.1
