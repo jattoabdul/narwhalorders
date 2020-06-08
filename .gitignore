@@ -28,6 +28,13 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+/doc
+/node_modules/*
+*.*.sw*
+/spec/examples.txt
+/coverage
+*.*.swo
+*.sql
 /public/packs
 /public/packs-test
 /node_modules
@@ -35,6 +42,12 @@
 yarn-debug.log*
 .yarn-integrity
 
-# Editor
-.idea
+# Intellij Idea
+.idea/
+
+# Vscode IDE
 .vscode
+dump.rdb
+
+.env
+latest.dump

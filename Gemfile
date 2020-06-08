@@ -6,9 +6,11 @@ ruby '2.6.5'
 
 # CORE
 gem 'shopify_app'
+
+# OTHER CORE
 gem 'activeresource', github: 'rails/activeresource'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching.
+gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'puma', '~> 4.3' # Use Puma as the app server - 4.1
 gem 'turbolinks', '~> 5'
 
@@ -45,10 +47,10 @@ gem 'rest-client', '~> 2.0'
 # JOB SERVER
 
 # MIDDLEWARE
-gem 'rack-attack', '~> 6.1'
-gem 'rack-cors', '~> 1.1'
-gem 'rack-heartbeat', '~> 1.1'
-gem 'rack-timeout', '~> 0.5'
+gem 'rack-attack', '~> 6.1' # handles blocking & throttling
+gem 'rack-cors', '~> 1.1' # handles Cross-Origin Resource Sharing
+gem 'rack-heartbeat', '~> 1.1' # simple uptime checker
+gem 'rack-timeout', '~> 0.5' # abort requests that are taking too long
 
 # REPORTING & MONITORING
 
