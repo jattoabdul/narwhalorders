@@ -36,10 +36,12 @@ yarn-debug.log*
 .yarn-integrity
 
 # Intellij Idea
+.idea
 .idea/
 
 # Vscode IDE
 .vscode
+.vscode/
 dump.rdb
 
 .env
