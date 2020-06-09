@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  root :to => 'home#index'
+  # Sidekiq GUI for job monitoring
+  if Rails.env.development?
+    require 'sidekiq/web'
+    require 'sidekiq-scheduler/web'
+    mount Sidekiq::Web => '/sidekiq'
+  end
+  # ShopifyApp for shopify integrations
   mount ShopifyApp::Engine, at: '/'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root :to => 'home#index'
 end
