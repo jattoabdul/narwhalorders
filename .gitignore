@@ -37,9 +37,11 @@ yarn-debug.log*
 
 # Intellij Idea
 .idea
+.idea/
 
 # Vscode IDE
 .vscode
+.vscode/
 dump.rdb
 
 .env
