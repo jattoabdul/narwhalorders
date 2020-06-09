@@ -8,7 +8,7 @@ class OrdersCreateJob < ActiveJob::Base
     end
 
     shop.with_shopify_session do
-      return unless webhook[:line_items].any? { |item| /Something/ =~ item['name'] }
+      return unless webhook[:line_items].any? { |item| /narwhal/ =~ item['name'] }
 
       order =
         {
