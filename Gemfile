@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
-
 
 # CORE
 gem 'shopify_app'
@@ -16,7 +17,7 @@ gem 'turbolinks', '~> 5'
 # RUBY HACKING
 gem 'active_hash', '~> 2.3'
 gem 'concurrent-ruby', '~> 1.1'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # DATA
 gem 'pg', '>= 0.18', '< 2.0'
@@ -42,8 +43,8 @@ gem 'rest-client', '~> 2.0'
 # PRODUCTION/STAGING
 
 # JOB SERVER
-gem 'redis', '~> 4.1'
 gem 'hiredis', '~> 0.6'
+gem 'redis', '~> 4.1'
 gem 'redis-rails', '~> 5.0'
 gem 'sidekiq', '~> 5.2'
 gem 'sidekiq-scheduler', '~> 3.0'
@@ -75,7 +76,7 @@ group :test, :development do
   gem 'capybara'
   gem 'dotenv-rails'
   gem 'factory_bot_rails', require: false
-  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
   gem 'rspec-rails', '~> 3.8'
   gem 'rubocop', '~> 0.58', require: false
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'factory_bot'
 
 RSpec.configure do |config|
@@ -27,7 +29,7 @@ if defined?(FactoryBot)
       rows = @factory_bot_results.map { |r| [r.first, r.last.fetch(:create, 0), r.last.fetch(:build, 0), r.last.fetch(:build_stubbed, 0)] }
       rows = rows.sort_by { |t| [t[1], t[3]] }.reverse
 
-      table = Terminal::Table.new headings: %w(Factory Created Built Stubbed), rows: rows
+      table = Terminal::Table.new headings: %w[Factory Created Built Stubbed], rows: rows
       table.align_column(0, :right)
       table.align_column(1, :center)
       table.align_column(2, :center)
