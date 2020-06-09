@@ -8,6 +8,16 @@
 
 <hr>
 
+<h2>Orders</h2>
+
+<ul>
+  <% @orders.each do |order| %>
+    <li><%= order.to_s %></li>
+  <% end %>
+</ul>
+
+<hr>
+
 <h2>Webhooks</h2>
 
 <% if @webhooks.present? %>
