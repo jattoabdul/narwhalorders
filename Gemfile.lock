@@ -225,8 +225,6 @@ GEM
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.2)
-    rack-attack (6.3.1)
-      rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-heartbeat (1.1.0)
@@ -419,7 +417,6 @@ DEPENDENCIES
   pry-rescue
   pry-stack_explorer
   puma (~> 4.3)
-  rack-attack (~> 6.1)
   rack-cors (~> 1.1)
   rack-heartbeat (~> 1.1)
   rack-timeout (~> 0.5)

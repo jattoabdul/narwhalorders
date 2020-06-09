@@ -47,7 +47,7 @@ gem 'rest-client', '~> 2.0'
 # JOB SERVER
 
 # MIDDLEWARE
-gem 'rack-attack', '~> 6.1' # handles blocking & throttling
+# gem 'rack-attack', '~> 6.1' # handles blocking & throttling
 gem 'rack-cors', '~> 1.1' # handles Cross-Origin Resource Sharing
 gem 'rack-heartbeat', '~> 1.1' # simple uptime checker
 gem 'rack-timeout', '~> 0.5' # abort requests that are taking too long
