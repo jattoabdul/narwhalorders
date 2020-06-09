@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateNarwhalOrders < ActiveRecord::Migration[6.0]
   def change
     create_table :narwhal_orders do |t|

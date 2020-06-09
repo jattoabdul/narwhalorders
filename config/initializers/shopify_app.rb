@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ShopifyApp.configure do |config|
   config.application_name = 'My Shopify App'
   config.api_key = ENV['SHOPIFY_API_KEY']

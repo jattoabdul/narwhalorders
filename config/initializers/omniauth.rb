@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.config.middleware.use(OmniAuth::Builder) do
   provider :shopify,
            ShopifyApp.configuration.api_key,
@@ -8,9 +10,9 @@ Rails.application.config.middleware.use(OmniAuth::Builder) do
 
              shopify_auth_params = strategy.session['shopify.omniauth_params']&.with_indifferent_access
              shop = if shopify_auth_params.present?
-                      "https://#{shopify_auth_params[:shop]}"
-                    else
-                      ''
+               "https://#{shopify_auth_params[:shop]}"
+             else
+               ''
              end
 
              strategy.options[:client_options][:site] = shop

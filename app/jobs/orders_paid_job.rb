@@ -1,5 +1,14 @@
-class OrdersPaidJob < ActiveJob::Base
-  def perform(shop_domain:, webhook:)
+# frozen_string_literal: true
+
+require 'json'
+
+class OrdersPaidJob
+  include Sidekiq::Worker
+  sidekiq_options queue: :events, retry: 3
+
+  # @param shop_domain [String] SHOP DOMAIN
+  # @param webhook [Hash] PAID WEBHOOK DATA
+  def perform(shop_domain, webhook)
     shop = Shop.find_by(shopify_domain: shop_domain)
 
     if shop.nil?
@@ -8,7 +17,8 @@ class OrdersPaidJob < ActiveJob::Base
     end
 
     shop.with_shopify_session do
-      return unless webhook[:line_items].any? { |item| /narwhal/ =~ item['name'] }
+      webhook = JSON.parse(webhook).with_indifferent_access
+      return unless webhook[:line_items].any? { |item| /narwhal/im =~ item[:name] }
 
       order =
         {
