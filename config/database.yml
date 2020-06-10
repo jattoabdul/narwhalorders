@@ -1,6 +1,6 @@
 default: &default
   adapter: postgresql
-  encoding: ut8
+  encoding: utf8
   sslmode: prefer
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   reaping_frequency: 10

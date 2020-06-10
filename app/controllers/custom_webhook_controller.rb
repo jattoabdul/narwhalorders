@@ -25,7 +25,6 @@ class CustomWebhookController < ApplicationController
       customer: webhook[:customer],
       line_items: webhook[:line_items]
     }.to_json
-    puts(webhook.to_json, '::::WEBHOOK HASH PAID')
     OrdersPaidJob.perform_async(shop_domain, webhook)
     head :no_content
   end
