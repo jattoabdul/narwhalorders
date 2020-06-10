@@ -15,5 +15,5 @@ Sidekiq.configure_server do |config|
   config.redis = {
     url: redis_url,
     driver: :hiredis
-  }.merge(Rails.env.development? ? {} : { size: 49 })
+  }.merge(Rails.env.development? ? {} : { size: 20 })
 end
