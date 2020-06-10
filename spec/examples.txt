@@ -1,12 +1,16 @@
 example_id                                                  | status  | run_time        |
 ----------------------------------------------------------- | ------- | --------------- |
 ./spec/controllers/custom_webhook_controller_spec.rb[1:1:1] | pending | 0.00001 seconds |
-./spec/models/narwhal_order_spec.rb[1:1:1:1]                | passed  | 0.0035 seconds  |
-./spec/models/narwhal_order_spec.rb[1:1:2:1]                | passed  | 0.02401 seconds |
-./spec/models/narwhal_order_spec.rb[1:2:1]                  | passed  | 0.00382 seconds |
-./spec/models/shop_spec.rb[1:1:1:1]                         | passed  | 0.00461 seconds |
-./spec/models/shop_spec.rb[1:1:2:1]                         | passed  | 0.21145 seconds |
-./spec/models/shop_spec.rb[1:2:1]                           | passed  | 0.00421 seconds |
-./spec/requests/custom_webhook_spec.rb[1:1:1]               | pending | 0.00002 seconds |
-./spec/routing/custom_webhook_spec.rb[1:1:1]                | passed  | 0.00597 seconds |
-./spec/routing/custom_webhook_spec.rb[1:1:2]                | passed  | 0.0027 seconds  |
+./spec/jobs/orders_create_job_spec.rb[1:1]                  | passed  | 0.35683 seconds |
+./spec/jobs/orders_create_job_spec.rb[1:2:1]                | passed  | 0.00895 seconds |
+./spec/jobs/orders_paid_job_spec.rb[1:1]                    | passed  | 0.01436 seconds |
+./spec/jobs/orders_paid_job_spec.rb[1:2:1]                  | passed  | 0.01874 seconds |
+./spec/models/narwhal_order_spec.rb[1:1:1:1]                | passed  | 0.00315 seconds |
+./spec/models/narwhal_order_spec.rb[1:1:2:1]                | passed  | 0.00327 seconds |
+./spec/models/narwhal_order_spec.rb[1:2:1]                  | passed  | 0.00498 seconds |
+./spec/models/shop_spec.rb[1:1:1:1]                         | passed  | 0.00837 seconds |
+./spec/models/shop_spec.rb[1:1:2:1]                         | passed  | 0.00534 seconds |
+./spec/models/shop_spec.rb[1:2:1]                           | passed  | 0.00247 seconds |
+./spec/requests/custom_webhook_spec.rb[1:1:1]               | pending | 0.00001 seconds |
+./spec/routing/custom_webhook_spec.rb[1:1:1]                | passed  | 0.00317 seconds |
+./spec/routing/custom_webhook_spec.rb[1:1:2]                | passed  | 0.00692 seconds |
