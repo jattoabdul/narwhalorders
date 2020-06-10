@@ -1,24 +1,17 @@
-<!--<h2>Products</h2>-->
-
-<!--<ul>-->
-  <%# @products.each do |product| %>
-<!--    <li><%#= link_to product.title, "https://#{@current_shopify_session.domain}/admin/products/#{product.id}", target: "_top" %></li>-->
-  <%# end %>
-<!--</ul>-->
-
-<!--<hr>-->
-
-<h2>Orders</h2>
-
 <% if @orders.any? %>
-<ul>
+<ul class="narwal-order__wrapper">
   <% @orders.each do |order| %>
-    <li>
-      <span>Order Name: <%= link_to "##{order.order_name}", "https://#{@current_shopify_session.domain}/admin/orders/#{order.order_id}", target: "_top" %></span>
-      <span>Customer: <%= order.customer %></span>
-    </li>
+    <%= link_to "https://#{@current_shopify_session.domain}/admin/orders/#{order.order_id}", target: "_top", class: "narwal-order__item-wrapper" do %>
+      <li class="narwal-order__item">
+        <%= image_tag 'narwal_flag_icon.svg', alt: "Narwhal Order Logo", class: "narwal-order__item-img" %>
+        <p class="narwal-order__item-text">
+          <span class="narwal-order__item-text--bold"><%= order.customer %></span> made a narwhal order.
+        </p>
+        <p class="narwal-order__item-text narwal-order__item-text--id"> ORDER #<%= order.order_name %></p>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 <% else %>
-  <div>There is no order.</div>
+  <div class="narwal-order__wrapper">There is no order.</div>
 <% end %>
