@@ -1,3 +1,16 @@
-example_id                               | status  | run_time        |
----------------------------------------- | ------- | --------------- |
-./spec/models/narwhal_order_spec.rb[1:1] | pending | 0.00002 seconds |
+example_id                                    | status  | run_time        |
+--------------------------------------------- | ------- | --------------- |
+./spec/jobs/orders_create_job_spec.rb[1:1]    | passed  | 0.01261 seconds |
+./spec/jobs/orders_create_job_spec.rb[1:2:1]  | passed  | 0.00728 seconds |
+./spec/jobs/orders_paid_job_spec.rb[1:1]      | passed  | 0.03821 seconds |
+./spec/jobs/orders_paid_job_spec.rb[1:2:1]    | passed  | 0.00725 seconds |
+./spec/models/narwhal_order_spec.rb[1:1:1:1]  | passed  | 0.00295 seconds |
+./spec/models/narwhal_order_spec.rb[1:1:2:1]  | passed  | 0.00319 seconds |
+./spec/models/narwhal_order_spec.rb[1:2:1]    | passed  | 0.00494 seconds |
+./spec/models/shop_spec.rb[1:1:1:1]           | passed  | 0.00814 seconds |
+./spec/models/shop_spec.rb[1:1:2:1]           | passed  | 0.33423 seconds |
+./spec/models/shop_spec.rb[1:2:1]             | passed  | 0.00468 seconds |
+./spec/requests/custom_webhook_spec.rb[1:1:1] | pending | 0.00001 seconds |
+./spec/requests/home_spec.rb[1:1:1]           | passed  | 0.43202 seconds |
+./spec/routing/custom_webhook_spec.rb[1:1:1]  | passed  | 0.00296 seconds |
+./spec/routing/custom_webhook_spec.rb[1:1:2]  | passed  | 0.00317 seconds |

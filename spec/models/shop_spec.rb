@@ -1,19 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe NarwhalOrder, type: :model do
+RSpec.describe Shop, type: :model do
   describe 'Factories' do
     context 'Valid factory' do
-      subject { build(:narwhal_order) }
+      subject { build(:shop) }
       specify { should be_valid }
     end
     context 'Invalid factory' do
-      subject { build(:invalid_narwhal_order) }
+      subject { build(:invalid_shop) }
       specify { is_expected.not_to be_valid }
     end
   end
 
   describe 'Associations' do
-    it { is_expected.to belong_to(:shop) }
+    it { is_expected.to have_many(:narwhal_orders) }
   end
 
   describe 'Validations' do
