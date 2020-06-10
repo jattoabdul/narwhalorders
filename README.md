@@ -20,11 +20,22 @@ After the app is installed, the app should monitor for new orders.
 > - Sidekiq
 
 #### To get started
-> - Install Docker
-> - Run `$ docker-compose up --build`
+> - Ensure Postgres is running properly
+> - Start Redis Server: `$ redis-server`
+> - Copy and Update Environment Variable: `cp .env-sample .env`
+> - Start Sidekiq Worker: `$ sidekiq -C config/sidekiq.yml`
+> - Install Dependencies: `$ bundle install`
+> - Create and Setup Database: `$ rails db:setup`
+> - Migrate DB: `$ rails db:migrate`
+> - Start Application Server `$ rails serve`
+> - To test with ngrok, start a tunnel with: `$ ngrok http 3000`
+> - Access App on `http//:localhost:3000` or via ngrok on generated URL
 
 #### How to run the test suite
-> `$ docker-compose run -e "RAILS_ENV=test" narwhals_app rspec -f d`
+>  `$ rspec`
+
+#### How to run linter
+>  `$ rubocop`
 
 #### Services (job queues, cache servers, search engines, etc.)
 >- Sidekiq - For Background Job
@@ -32,7 +43,8 @@ After the app is installed, the app should monitor for new orders.
 >- Rspec - For Writing and running tests
 >- Rubocop - For Linting
 
-#### Deployment instructions
+#### Deployment instructions for Heroku
+> - Add and Commit to Git `$ git am 'deploy: deploying to heroku'`
 > - `$ git push heroku master`
 
 #### LICENSE
