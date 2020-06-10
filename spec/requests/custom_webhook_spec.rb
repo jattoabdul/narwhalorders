@@ -38,8 +38,6 @@ RSpec.describe '/webhooks', type: :request do
       @request.session[:shopify_domain] = shop.shopify_domain
 
       allow(ShopifyAPI::Shop).to receive(:current).and_return(shop)
-      # allow(ShopifyAPI::Shop).to receive(:shop_domain).and_return(shop.shopify_domain)
-      # post webhooks_orders_create_url
       post webhooks_orders_create_path
       expect(response).to be_successful
     end
