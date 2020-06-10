@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe CustomWebhookController, type: :controller do
+RSpec.describe '/webhooks', type: :request do
   def login(shop)
     OmniAuth.config.test_mode = true
     OmniAuth.config.add_mock(:shopify,
@@ -37,12 +37,13 @@ RSpec.describe CustomWebhookController, type: :controller do
       @request.session[:shop_id] = shop.id
       @request.session[:shopify_domain] = shop.shopify_domain
 
-      # allow(controller).to receive(:shop_domain).and_return(shop.shopify_domain)
-      # allow_any_instance_of(TestCustomWebhookController).to receive(:shop_domain).and_return(shop.shopify_domain)
+      allow(controller).to receive(:shop_domain).and_return(shop.shopify_domain)
+      # allow_any_instance_of(ShopifyApp::WebhookVerification).to receive(:anything).and_return(shop.shopify_domain)
+      # allow_any_instance_of(CustomWebhookController).to receive(:shop_domain).and_return(shop.shopify_domain)
       # post webhooks_orders_create_url
-      # expect(response).to have_http_status(:success)
       post webhooks_orders_create_path
-      expect(response).to be_successful
+      # expect(response).to be_successful
+      expect(response).to have_http_status(:success)
     end
   end
 end
