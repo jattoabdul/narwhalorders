@@ -37,6 +37,13 @@ After the app is installed, the app should monitor for new orders.
 #### How to run linter
 >  `$ rubocop`
 
+#### To get started with Docker - WIP
+ > - Install Docker
+ > - Run `$ docker-compose up --build`
+ 
+ #### How to run the test suite in Docker - WIP
+ > `$ docker-compose run -e "RAILS_ENV=test" narwhals_app rspec -f d`
+
 #### Services (job queues, cache servers, search engines, etc.)
 >- Sidekiq - For Background Job
 >- Redis - For Job Persistence
