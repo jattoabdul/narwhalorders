@@ -1,3 +1,69 @@
 // Place all the styles related to the CustomWebhook controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Variables
+$shadow-rgba: rgba(0, 0, 0, 0.169894);
+$grey: #7C7C7C;
+$box-shadow: 0 0 29px 8px $shadow-rgba;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all ease-in-out .1s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+.narwal-order__wrapper {
+  display: grid;
+  //grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+  justify-content: space-around;
+  list-style: none;
+  grid-column-gap: 4rem;
+  grid-row-gap: 2rem;
+  margin: 2rem 5rem auto;
+}
+
+.narwal-order__item-wrapper {
+  padding: 1rem;
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+.narwal-order__item {
+  position: relative;
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.narwal-order__item-img {
+  position: absolute;
+  left: -3.5rem;
+  top: 30%;
+}
+
+.narwal-order__item-text {
+  margin-bottom: .3rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.narwal-order__item-text--bold {
+  font-weight: bold;
+}
+
+.narwal-order__item-text--id {
+  color: $grey;
+  font-size: 1rem;
+}
+

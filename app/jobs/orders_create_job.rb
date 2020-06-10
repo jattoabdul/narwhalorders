@@ -24,7 +24,7 @@ class OrdersCreateJob
         {
           order_id: webhook[:id],
           order_name: webhook[:order_number],
-          customer: "#{webhook[:customer][:first_name]} #{webhook[:customer][:first_name]}"
+          customer: "#{webhook[:customer][:first_name]} #{webhook[:customer][:last_name]}"
         }
       order = NarwhalOrder.where(order_id: order[:order_id]).first_or_create(order)
       shop.narwhal_orders << order
