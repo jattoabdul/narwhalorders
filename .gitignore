@@ -48,3 +48,5 @@ dump.rdb
 latest.dump
 # Coverage directory used by tools like istanbul
 coverage
+supervisord.log
+supervisord.pid
