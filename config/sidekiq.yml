@@ -3,11 +3,11 @@
 :timeout: 8
 
 development:
-  :concurrency: 3
+  :concurrency: 5
 staging:
-  :concurrency: <%= ENV.fetch('RAILS_MAX_THREADS', 3) %>
+  :concurrency: <%= ENV.fetch('RAILS_MAX_THREADS', 5) %>
 production:
-  :concurrency: <%= ENV.fetch('RAILS_MAX_THREADS', 3) %>
+  :concurrency: <%= ENV.fetch('RAILS_MAX_THREADS', 5) %>
 
 :queues:
   - ["mailers", 3]
