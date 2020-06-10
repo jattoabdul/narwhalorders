@@ -22,7 +22,7 @@ After the app is installed, the app should monitor for new orders.
 #### To get started
 > - Ensure Postgres is running properly
 > - Start Redis Server: `$ redis-server`
-> - Copy and Update Environment Variable: `cp .env-sample .env`
+> - Copy and Update Environment Variable: `cp .env.sample .env`
 > - Start Sidekiq Worker: `$ sidekiq -C config/sidekiq.yml`
 > - Install Dependencies: `$ bundle install`
 > - Create and Setup Database: `$ rails db:setup`
