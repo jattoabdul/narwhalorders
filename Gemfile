@@ -10,7 +10,7 @@ gem 'shopify_app'
 
 # OTHER CORE
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching.
-gem 'puma', '~> 4.1' # Use Puma as the app server
+gem 'puma', '~> 4.3' # Use Puma as the app server
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'turbolinks', '~> 5'
 
